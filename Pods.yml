@@ -3,7 +3,7 @@ kind: pod
 metadata:
       name: akshay-app
       labels:
-      apps:  agc-app
+      apps: agc-app
     spec:
     containers:
     - name : nginx
