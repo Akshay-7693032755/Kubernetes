@@ -7,8 +7,7 @@ spec:
        app: new_app
     type: NodePort
     ports:
-        - Port: 80
+        - protocol: TCP
+          port: 80
           targetport: 80
-          nodePort:
-          name: 
-          protocol: TCP
+          type:   LoadBalancer
