@@ -1,0 +1,20 @@
+apiversion: v1
+kind: service
+metadata:
+   name:  akshportsrv
+
+spec:
+  selector:
+     app: new_app
+   type: nodeport
+   ports:
+    - port: 80
+      targetport: 80
+      nodeport:
+      name: nginx
+      protocol: TCP
+    - port: 8080
+      targetport: 8080
+      NodePort:
+      name: tomcat
+      protocol: TCP  
