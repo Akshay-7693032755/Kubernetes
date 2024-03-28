@@ -12,7 +12,7 @@ spec:
       - containerport: 80
         protocol: TCP
     - name: tomcat
-        image: tomcat:latest
-         ports :
+      image: tomcat:latest
+      ports :
       - containerport: 8080
-         protocol: TCP
+        protocol: TCP
