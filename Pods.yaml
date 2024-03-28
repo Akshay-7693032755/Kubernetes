@@ -4,7 +4,7 @@ metadata:
       name: akshay-app
       labels:
        app: ac-app
-    spec:
+spec:
         containers:
         - name : nginx
         image: nginx:latest
