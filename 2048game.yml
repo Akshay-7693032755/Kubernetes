@@ -2,11 +2,11 @@ apiversion: v1
 kind:Pod
 metadata: 
   ]name: 2048-game
-  label: 
+   label: 
     app: 2048-ws
 spec:
-  containers:
+   containers:
   - name: 2048-container
-   images: blackicebird/2048
-   ports:
+    images: blackicebird/2048
+    ports:
   - containerport: 80 
