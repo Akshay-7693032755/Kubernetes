@@ -1,0 +1,12 @@
+apiversion: v1
+kind: services
+metadata:
+    name: mygame-svs
+spec:
+    selender:
+       app: 2048-ws
+       ports:
+        - protocol: TCP
+        port: 80
+        targetport: 80
+        type: loadbalancer
