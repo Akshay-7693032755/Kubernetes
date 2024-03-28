@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
      app: new_app
-  type: nodeport
+  type: NodePort
    ports:
     - port: 80
       targetport: 80
