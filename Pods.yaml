@@ -8,11 +8,11 @@ spec:
       containers:
         - name : nginx
           image: nginx:latest
-          ports:
+          port:
       - containerport: 80
           protocol: TCP
         - name: tomcat
           image: tomcat:latest
-          ports :
+          port :
       - containerport: 8080
          protocol: TCP
