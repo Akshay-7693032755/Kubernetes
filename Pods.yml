@@ -3,7 +3,7 @@ kind: pod
 metadata:
       name: akshay-app
       labels:
-      apps: agc-app
+      apps: ac-app
     spec:
     containers:
     - name : nginx
@@ -11,8 +11,8 @@ metadata:
       ports:
       - containerport: 80
         protocol: TCP
-      -name: tomcat
-      image: tomcat:latest
-      ports :
+      - name: tomcat
+        image: tomcat:latest
+        ports :
       - containerport: 8080
-        protocol: TCP
+         protocol: TCP
