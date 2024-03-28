@@ -7,7 +7,7 @@ spec:
   selector:
      app: new_app
   type: NodePort
-  - ports:
+  ports:
     - port: 80
       targetPort: 80
       nodePort:
