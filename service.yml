@@ -15,6 +15,6 @@ spec:
       protocol: TCP
     - port: 8080
       targetport: 8080
-      NodePort:
+       NodePort:
       name: tomcat
       protocol: TCP  
