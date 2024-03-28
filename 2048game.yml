@@ -3,10 +3,10 @@ kind:Pod
 metadata: 
      name: 2048-pod
      labels: 
-     app: new_app
+      app: new_app
 spec:
    containers:
-  - name: 2048-container
+   - name: 2048-container
     image: blackicebird/2048
     ports:
       - containerport: 80
