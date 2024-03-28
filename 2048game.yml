@@ -1,12 +1,13 @@
 apiversion: v1
 kind:Pod
 metadata: 
-   name: 2048-pod
-   label: 
-    app: new_app
+     name: 2048-pod
+     labels: 
+     app: new_app
 spec:
    containers:
   - name: 2048-container
     images: blackicebird/2048
     ports:
-      - containerport: 80 
+      - containerport: 80
+       protocol: TCP 
