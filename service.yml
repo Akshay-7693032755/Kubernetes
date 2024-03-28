@@ -1,5 +1,5 @@
 apiversion: v1
-kind: service
+kind: Service
 metadata:
    name:  akshportsrv
 
@@ -9,12 +9,12 @@ spec:
   type: NodePort
    ports:
     - port: 80
-      targetport: 80
-      nodeport:
+      targetPort: 80
+      nodePort:
       name: nginx
       protocol: TCP
     - port: 8080
-      targetport: 8080
-       NodePort:
+      targetPort: 8080
+      nodePort:
       name: tomcat
       protocol: TCP  
