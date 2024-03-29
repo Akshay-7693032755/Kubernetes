@@ -1,0 +1,32 @@
+apiversion: v1
+kind: pod
+metadata: 
+  name: acpod
+  namespace: ac
+  labels:
+    app: myapp
+spec:
+    containers:
+        - name: nginx
+          image: nginx:lagtest
+          Ports:
+            - containersport : 805
+            protocol : TCP
+            name: nginx
+
+---
+
+apiversion: v1
+kind: services
+metadat: 
+    name: b24services
+    namespace: ac
+
+spec: 
+    type: NodePort
+    selector:
+      app: myapp
+    port:
+        - port: 80
+          targetport: 80
+          protocol: TCP
