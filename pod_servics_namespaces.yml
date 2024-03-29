@@ -8,11 +8,10 @@ metadata:
 spec:
     containers:
         - name: nginx
-          image: nginx:lagtest
+          image: nginx:latest
           ports:
           - containerPort : 80
             protocol : TCP
-            name: nginx
 ---
 apiVersion: v1
 kind: Service
@@ -28,3 +27,5 @@ spec:
         - port: 80
           targetport: 80
           protocol: TCP
+          name: nginx
+...
