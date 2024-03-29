@@ -6,7 +6,7 @@ metadata:
       app: new_app
 spec:
    containers:
-    - name: 2048
+    - name: 2048game
       image: blackicebird/2048:latest
       ports:
       - containerPort: 80
