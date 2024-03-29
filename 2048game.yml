@@ -1,5 +1,5 @@
 apiversion: v1
-kind:Pod
+kind: Pod
 metadata: 
      name: 2048-pod
      labels: 
