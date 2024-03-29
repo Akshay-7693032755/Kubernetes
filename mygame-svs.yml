@@ -1,5 +1,5 @@
-apiversion: v1
-kind: services
+apiVersion: v1
+kind: Service
 metadata:
     name: mygame-svs
 spec:
