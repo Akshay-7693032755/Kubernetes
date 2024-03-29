@@ -1,14 +1,15 @@
 apiVersion: v1
-kind: Pod
-metadata: 
-     name: 2048
-     labels: 
-      app: new_app
-spec:
-   containers:
-    - name: 2048game
-      image: blackicebird/2048:latest
-      ports:
-      - containerPort: 80
-        protocol: TCP
+kind: Pod 
+metadata:
+  name: game 
+  labels:
+   app: game
+  namespace: ac 
+spec: 
+  containers: 
+   - name: gameak
+     image: blackicebird/2048:latest 
+     ports:
+     - containerPort: 80
+       protocol: TCP 
        
