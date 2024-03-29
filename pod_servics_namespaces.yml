@@ -9,16 +9,14 @@ spec:
     containers:
         - name: nginx
           image: nginx:lagtest
-          Ports:
+          ports:
             - containerPort : 80
             protocol : TCP
             name: nginx
-
 ---
-
 apiversion: v1
 kind: services
-metadat: 
+metadata: 
     name: b24services
     namespace: ac
 
