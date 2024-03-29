@@ -9,6 +9,6 @@ spec:
     - name: 2048
       image: blackicebird/2048:latest
       ports:
-      - containerport: 80
+      - containerPort: 80
         protocol: TCP
        
