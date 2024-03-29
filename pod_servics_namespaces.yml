@@ -10,7 +10,7 @@ spec:
         - name: nginx
           image: nginx:lagtest
           Ports:
-            - containersport : 805
+            - containerPort : 80
             protocol : TCP
             name: nginx
 
