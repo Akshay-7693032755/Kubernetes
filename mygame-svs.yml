@@ -5,8 +5,9 @@ metadata:
 spec:
     selector: 
        app: new_app
+    type: NodePort
     ports:
         - protocol: TCP
           port: 80
-          targetport: 80
-          type:   LoadBalancer
+          targetPort: 80
+          name: 2048
