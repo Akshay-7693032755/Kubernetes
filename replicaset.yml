@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: repliaset
+kind: replicaset
 metadata:
     name: rs
     labels:
@@ -19,5 +19,5 @@ spec:
               ports: 
                   - containersPort: 80
                     protocol: TCP
-                    
+
       
