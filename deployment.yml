@@ -13,7 +13,7 @@ spec:
     selector:
       matchLabels: 
           app: acapp
-    replicas: 4
+    replicas: 10
     template: 
       metadata:
         labels:
@@ -22,7 +22,7 @@ spec:
       spec: 
         containers:
           - name: nginxapp
-            image: nginx:latest
+            image: tomcat:latest
             ports: 
                 - containerPort: 80
                   protocol: TCP
