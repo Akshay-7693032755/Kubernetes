@@ -9,7 +9,7 @@ spec:
       type: RollingUpdate
       rollingUpdate:
             maxSurge: 1
-            MaxUnavailable: 1
+            maxUnavailable: 1
       selector:
         matchLabels: 
             app: acapp
