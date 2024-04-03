@@ -10,22 +10,22 @@ spec:
       rollingUpdate:
             maxSurge: 1
             maxUnavailable: 1
-      selector:
-        matchLabels: 
-            app: acapp
-      replicas: 4
-      template: 
-        metadata:
-          labels:
-            name: nginxapp
-            app: acapp
-        spec: 
-          containers:
-            - name: nginxapp
-              image: nginx:latest
-              ports: 
-                  - containersPort: 80
-                    protocol: TCP
+    selector:
+      matchLabels: 
+          app: acapp
+    replicas: 4
+    template: 
+      metadata:
+        labels:
+          name: nginxapp
+          app: acapp
+      spec: 
+        containers:
+          - name: nginxapp
+            image: nginx:latest
+            ports: 
+                - containersPort: 80
+                  protocol: TCP
 
 
           
