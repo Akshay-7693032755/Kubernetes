@@ -11,7 +11,7 @@ spec:
             maxsure: 1
             Maxunavailable: 1
       selector:
-        matchlabels: 
+        matchLabels: 
             app: acapp
       replicas: 4
       template: 
