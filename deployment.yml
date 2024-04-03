@@ -3,7 +3,7 @@ kind:  Deployment
 metadata:
   name: deploy
   labels:
-    app: depapp
+    app: acapp
 spec:
     strategy:
       type: Rolllingupdate
@@ -12,13 +12,13 @@ spec:
             Maxunavailable: 1
       selector:
         matchlabels: 
-            app: depapp
+            app: acapp
       replicas: 4
       template: 
         metadata:
           labels:
             name: nginxapp
-            app: depapp
+            app: acapp
         spec: 
           containers:
             - name: nginxapp
