@@ -6,10 +6,10 @@ metadata:
     app: acapp
 spec:
     strategy:
-      type: Rolllingupdate
-      rollingupdate:
+      type: RollingUpdate
+      rollingUpdate:
             maxsure: 1
-            Maxunavailable: 1
+            MaxUnavailable: 1
       selector:
         matchLabels: 
             app: acapp
