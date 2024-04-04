@@ -16,7 +16,7 @@ spec:
       spec:
         containers:
          - name : cwatch
-           image: amazon/cloudwatch-agent
+           image: amazon/cloudwatch-agent:latest
            ports:
              - containerPort: 80
                protocol: TCP
