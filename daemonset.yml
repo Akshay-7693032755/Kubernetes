@@ -6,7 +6,7 @@ metadata:
       app: acapp
 spec:
     selector:
-      matchlabels:
+      matchLabels:
           app: acapp
     template:
       metadata:
