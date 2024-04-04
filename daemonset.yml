@@ -10,9 +10,9 @@ spec:
           app: acapp
     template:
       metadata:
-      labels:
-        name: cwatch
-        app: acapp
+        labels:
+          name: cwatch
+          app: acapp
       spec:
         containers:
          - name : cwatch
