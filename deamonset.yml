@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deamonset
+metadata:
+    name: deamon
+    labels:
+      app: acapp
+  spec:
+      selector:
+        matchlabels:
+          app: acapp
+      template:
+        metadata:
+        labels:
+          name: cwatch
+          app: acapp
+        spec:
+          containers:
+           - name : cwatch
+            image: 
+            ports:
+                - containerPort: 80
+                  protocol: TCP
