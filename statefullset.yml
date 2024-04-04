@@ -1,26 +1,27 @@
 apiVersion: app/v1
 kind:  StatefulSet
 metadata:
-    name: stateful
-    labels:
-      app: acapp
-  spec:
-      selector:
-        matchLabels:
-            app: acapp
-      replicas: 4
-      template:
-        metadata:
-          labels:
-            name: agc
-            app: acapp
-        spec:
-          containers:
-            - name: mysql
-              image: mysql
-              ports:
-                - containerPort: 3306
-                  protocol: TCP
-              env: 
-                - name: MYSQL_ROOT_PASSWORD
+  name: stateful
+  labels:
+    app: acapp
+spec:
+    selector:
+      matchLabels:
+          app: acapp
+    replicas: 4
+    template:
+      metadata:
+        labels:
+          name: agc
+          app: acapp
+      spec:
+        containers:
+           - name: mysql
+             image: mysql
+             ports:
+              - containerPort: 3306
+                protocol: TCP
+             env: 
+                  - name: MYSQL_ROOT_PASSWORD
                     value: "1234"
+            
