@@ -24,3 +24,8 @@ spec:
                   protocol: TCP
             env:
                  - name: MYSQL_ROOT_PASSWORD
+                   valueFrom:
+                        secretKeyRef:
+                            name: secret
+                            Key: rootac
+                    
