@@ -1,0 +1,31 @@
+
+apiVersion: apps/v1
+kind:  StatefulSet
+metadata:
+  name: statefull
+  labels:
+    app: acapp
+spec:
+    selector:
+      matchLabels:
+          app: acapp
+    replicas: 4
+    template:
+      metadata:
+        labels:
+          name: agc
+          app: acapp
+      spec:
+        containers:
+           - name: mysql
+             image: mysql
+             ports:
+              - containerPort: 3306
+                protocol: TCP
+             env: 
+                  - name: MYSQL_ROOT_PASSWORD
+                    valueFrom:
+                        configMapKeyRef:
+                          name: game-demo
+                          key: rootac
+        
