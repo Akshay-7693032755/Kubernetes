@@ -15,17 +15,17 @@ spec:
         labels:
           name: mdb
           app: depapp
-    spec:
+     spec:
       containers:
-        - name: mysql
+      - name: mysql
         image: mysql
         ports:
-          - containerPort: 3306
+        - containerPort: 3306
           protocol: TCP
         env:
-          - name: MYSQL_ROOT_PASSWORD
-             valueFrom:
-                secretKeyRef:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
                   name: secret
                   Key: rootac
                         
