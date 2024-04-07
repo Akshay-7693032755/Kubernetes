@@ -27,7 +27,7 @@ spec:
                 - arm64
       containers:
       - name: snake-game
-        image: rahulgadre/snake-game
+        image: Akshay/snake-game
         ports:
         - name: http
           containerPort: 80
