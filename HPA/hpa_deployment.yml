@@ -5,33 +5,33 @@ metadata:
   labels:
       app: deployapp
 spec:
-    replicas: 2
-    strategy:
+    replicas: 2     #desiredstate
+    strategy: 
           type: RollingUpdate
-    selector:
+    selector: 
           matchLabels:
             app: deployapp
-    template:
-        metadata:
-            app: deployapp
+    template: 
+        metadata: 
+            labels: 
+              app: deployapp   
         spec: 
           containers:
-            - name: frontendapp
-              images: akshaychaudhari/frontendrds 
-              ports:
+             - name: frontendapp
+               image: anupdudhe/frontendrds
+               ports:
                   - containerPort: 80
                     protocol: TCP
-              resources:
+               resources:
                   requests:
                         memory: "64Mi"
                         cpu: "125m"
-                  limits:
+                  limits:     
                         memory: "128Mi"
                         cpu: "250m"
-
 ---
-apiVersion: autoscalling/v2
-kind:  HorizontalPodAutoscaler
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
 metadata:
   name: hpa
 spec:
