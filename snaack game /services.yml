@@ -6,11 +6,12 @@ metadata:
   labels:
     app: snake-game
 spec:
+  selector:
+      app: snake-game
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: NodePort
-  selector:
-    matchLabels:
-      app: snake-game
+  
+  
