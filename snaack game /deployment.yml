@@ -2,33 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: snake-game-deployment
-  namespace: kube-system
   labels:
     app: snake-game
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app.kubernetes.io/name: snake-game
+      app: snake-game
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: snake-game
+        app: snake-game
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/arch
-                operator: In
-                values:
-                - amd64
-                - arm64
-      containers:
-      - name: snake-game
-        image: rahulgadre/snake-game
-        ports:
-        - name: http
-          containerPort: 80
-        imagePullPolicy: IfNotPresent
+       template:
+        metadata:
+          name: snake-game-deployment
+          labels:
+            app: snake-game
+        spec:
+          containers:
+            - name: snake-game
+              image: rahulgadre/snake-game
+              ports:
+               containerPort: 80
+               protocol: TCP
+               
+          
