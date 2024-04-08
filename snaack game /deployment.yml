@@ -11,20 +11,15 @@ spec:
       app: snake-game
   template:
     metadata:
+      name: snake-game
       labels:
         app: snake-game
     spec:
-       template:
-        metadata:
-          name: snake-game-deployment
-          labels:
-            app: snake-game
-        spec:
           containers:
             - name: snake-game
               image: rahulgadre/snake-game
               ports:
                containerPort: 80
                protocol: TCP
-               
+
           
