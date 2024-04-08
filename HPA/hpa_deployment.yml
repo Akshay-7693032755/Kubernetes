@@ -1,0 +1,50 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: deployapp
+  labels:
+      app: deployapp
+spec:
+    replicas: 2  #desiredstste
+    strategy:
+          type: RollingUpdate
+    selector:
+          matchLabels:
+            app: deployapp
+    template:
+        metadata:
+            app: deployapp
+        spec: 
+          containers:
+            - name: frontendapp
+              images: 
+              ports:
+                  - containerPort: 80
+                    protocol: TCP
+              resources:
+                  requests:
+                        memory: "64Mi"
+                        cpu: "125m"
+                  limits:
+                        memory: "128Mi"
+                        cpu: "250m"
+
+    ---
+apiversion: autoscalling/v2
+kind:  HorizontalPodAutoscaler
+metadata:
+  name: hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: deployapp
+  minReplicas: 1
+  maxReplicas: 4
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
