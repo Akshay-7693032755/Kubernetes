@@ -29,8 +29,8 @@ spec:
                         memory: "128Mi"
                         cpu: "250m"
 
-    ---
-apiversion: autoscalling/v2
+---
+apiVersion: autoscalling/v2
 kind:  HorizontalPodAutoscaler
 metadata:
   name: hpa
