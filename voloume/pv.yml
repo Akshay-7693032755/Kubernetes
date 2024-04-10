@@ -14,4 +14,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   hostPath:
-    path: "/mnt/data"    *963.0
+    path: "/mnt/data" 
